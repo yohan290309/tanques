@@ -13,13 +13,26 @@ import robocode.Event;
  *
  * @author JYPARDO
  */
-public class Tanques {
+public class Tanques extends AdvancedRobot {
+    /* variables globales */
+    int objetivo = 0;       //dependiendo de cantidad de objetivos cambia de fase
+    int fase = 0;           //segun sus niveles de agresividad       
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public void run(){
+        setColors(Color.red,Color.blue,Color.black);        // colores del tanque
+        
     }
     
+    // en esta funcion se crea estrategia principal del robot 
+    public void estrategia(){
+        setMaxVelocity(8);                  // asigna velocidad
+        turnRight(getHeading() % 90);       // para que gire hacia la derecha
+        ahead(500);                         // va hacia adelante lo indicado
+                                            //ahead hace referencia al evento onHitWall
+        setMaxVelocity(5);                  // disminuye velocidad para disminuir daños de choque           
+    }
+    
+    public void onHitWall(HitWallEvent e){
+        tu
+    }
 }
