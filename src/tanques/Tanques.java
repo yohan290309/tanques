@@ -4,7 +4,11 @@
  * and open the template in the editor.
  */
 package tanques;
-
+/* paquete para poder inciar robocode
+*/
+import java.awt.Color;
+import robocode.*;
+import robocode.Event;
 /**
  *
  * @author JYPARDO
